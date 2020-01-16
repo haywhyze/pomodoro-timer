@@ -18,11 +18,13 @@ function buttonCreator() {
 
   buttonContainer.addEventListener("click", e => {
     if (e.target.textContent === "Reset") {
-      console.log("Reset");
+      stopCountdown();
+      resetCountdown();
     } else if (e.target.textContent === "Start") {
       if (!countDown) startCountdown(currentTime);
     } else if (e.target.textContent === "Stop") {
       clearInterval(countDown);
+      countDown = null;
     }
   });
 

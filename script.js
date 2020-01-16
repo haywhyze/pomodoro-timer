@@ -1,13 +1,13 @@
 const minutesElement = document.querySelector("#minutes");
 const secondsElement = document.querySelector("#seconds");
 let countDown;
-let currentTime = 25 * 60 + 1000;
+let currentTime = 25 ;
 
-function startCountdown(time) {
-  const countDownTime = new Date().getTime() + time;
-  
+function startCountdown(minute) {
+  const countDownTime = new Date().getTime() + minute * 60 * 1000;
+
   if (countDown) clearInterval(countDown);
-  
+
   countDown = setInterval(() => {
     const now = new Date().getTime();
 
@@ -26,21 +26,24 @@ function startCountdown(time) {
       minimumIntegerDigits: 2
     });
 
-    
     if (timeDifference < 0) {
-      clearInterval(countDown);
-
-      minutesElement.textContent = (0).toLocaleString("en-US", {
-        minimumIntegerDigits: 2
-      });
-
-      secondsElement.textContent = (0).toLocaleString("en-US", {
-        minimumIntegerDigits: 2
-      });
+      stopCountdown()
+      resetCountdown()
     }
   }, 500);
 }
 
-function stopCountdown() {}
+function stopCountdown() {
+  clearInterval(countDown);
+  countDown = null;
+}
 
-function resetCountdown() {}
+function resetCountdown() {
+  minutesElement.textContent = (0).toLocaleString("en-US", {
+    minimumIntegerDigits: 2
+  });
+
+  secondsElement.textContent = (0).toLocaleString("en-US", {
+    minimumIntegerDigits: 2
+  });
+}
