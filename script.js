@@ -46,4 +46,6 @@ function resetCountdown() {
   secondsElement.textContent = (0).toLocaleString("en-US", {
     minimumIntegerDigits: 2
   });
+
+  currentTime = 25 * 60 * 1000;
 }
