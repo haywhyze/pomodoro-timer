@@ -16,6 +16,18 @@ function buttonCreator() {
 
   buttonContainer.append(startButton, stopButton, resetButton);
 
+  buttonContainer.addEventListener("click", (event) => {
+    if (event.target.textContent === "Reset") {
+      stopCountdown()
+      resetCountdown()
+    } else if (event.target.textContent === "Stop") {
+      stopCountdown();
+    }
+    if (event.target.textContent === "Start") {
+      if(!countdown) startCountdown(currentTime);
+    }
+  })
+
   return buttonContainer;
 }
 
