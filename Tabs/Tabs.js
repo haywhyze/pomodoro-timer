@@ -23,13 +23,13 @@ function tabsCreator() {
     });
     e.target.classList.add("active");
     if (e.target.textContent === "Pomodoro") {
-      currentTime = 25;
+      currentTime = 25 * 60 * 1000;
       startCountdown(currentTime);
     } else if (e.target.textContent === "Short Break") {
-      currentTime = 5;
+      currentTime = 5 * 60 * 1000;
       startCountdown(currentTime);
     } else if (e.target.textContent === "Long Break") {
-      currentTime = 10;
+      currentTime = 10 * 60 * 1000;
       startCountdown(currentTime);
     }
   });
