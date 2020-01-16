@@ -1,3 +1,48 @@
 .container {
   min-height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding: 2rem 5rem;
+  text-align: left;
+}
+.header h1 {
+  text-align: center;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.tabs .tab {
+  padding: 0.5rem 4rem;
+  border: 1px solid black;
+  cursor: pointer;
+  background: #2ba6cb;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.tabs .tab:hover {
+  background: #2284a1;
+}
+.tabs .tab:active {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+.tabs .tab.active {
+  background: #2284a1;
+}
+.timer-container {
+  display: flex;
+  justify-content: center;
+  margin: 4rem;
+}
+.timer-container .watch-display {
+  font-size: 5rem;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
 }

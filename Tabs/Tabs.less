@@ -1,0 +1,26 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  .tab {
+    padding: 0.5rem 4rem;
+    border: 1px solid black;
+    cursor: pointer;
+    background: #2ba6cb;
+    color: white;
+    box-shadow: 0 2px 5px rgba(black, 0.5);
+
+    &:hover {
+      background: darken(#2ba6cb, 10);
+    }
+
+    &:active {
+      box-shadow: 0 1px 5px rgba(black, 0.3);
+    }
+
+    &.active {
+      background: darken(#2ba6cb, 10);
+    }
+  }
+}
