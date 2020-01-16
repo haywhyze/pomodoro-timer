@@ -58,6 +58,9 @@ body {
 .tab:active {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
+.tab.active {
+  background: #8f49ff;
+}
 .watch-container {
   display: flex;
   justify-content: center;

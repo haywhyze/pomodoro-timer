@@ -1,4 +1,4 @@
-function tabsCreator(tabsList) {
+function tabsCreator() {
   const tabsContainer = document.createElement("ul");
   tabsContainer.classList.add("tabs");
 
@@ -16,7 +16,14 @@ function tabsCreator(tabsList) {
 
   tabsContainer.append(pomodoroTab, shortBreakTab, longBreakTab);
 
+  tabsContainer.addEventListener("click", e => {
+    Array.from(tabsContainer.children).forEach(element => {
+      element.classList.remove("active");
+    });
+    e.target.classList.add("active");
+  });
+
   return tabsContainer;
 }
 
-mainContainer.append(tabsCreator(tabsItems));
+mainContainer.append(tabsCreator());

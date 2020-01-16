@@ -1,0 +1,1 @@
+const pomodoroTab = document.querySelector("#pomodoroTab")
