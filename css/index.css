@@ -1,0 +1,105 @@
+/* This line is importing the font 'Roboto'. DO NOT change line 2*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
+/* Below this line is where you will start your work */
+/* It is important to note, you will not be writing any CSS in this file*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  background-color: #fffef7;
+}
+.container {
+  background: aliceblue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding: 2rem 5rem;
+}
+.header h1 {
+  text-align: center;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.tab {
+  padding: 0.5rem 4rem;
+  border: 1px outset grey;
+  cursor: pointer;
+  background: #ae7cff;
+  color: aliceblue;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.tab:hover {
+  background: #8f49ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.tab:active {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+.watch-container {
+  display: flex;
+  justify-content: center;
+  margin: 4rem;
+}
+.watch-container .watch-display {
+  border: 1px outset black;
+  padding: 0.2rem 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 5rem;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+.button-container button {
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.button-container button:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.button-container button:active {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+.button-container button:focus {
+  outline: none;
+}
+.button-container .stop {
+  background: red;
+  color: white;
+}
+.button-container .reset {
+  background: grey;
+  color: white;
+}
+.button-container .start {
+  background: green;
+  color: white;
+}

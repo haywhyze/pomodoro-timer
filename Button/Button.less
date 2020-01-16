@@ -1,0 +1,41 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+
+  button {
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(black, 0.2);
+
+    &:hover {
+      box-shadow: 0 2px 5px rgba(black, 0.5);
+    }
+
+    &:active {
+      box-shadow: 0 1px 5px rgba(black, 0.3);
+    }
+
+    &:focus {
+        outline: none;
+    }
+  }
+
+  .stop {
+    background: red;
+    color: white;
+  }
+
+  .reset {
+    background: grey;
+    color: white;
+  }
+
+  .start {
+    background: green;
+    color: white;
+  }
+}
