@@ -5,6 +5,7 @@ function tabsCreator() {
   const pomodoroTab = document.createElement("li");
   pomodoroTab.textContent = "Pomodoro";
   pomodoroTab.classList.add("tab");
+  pomodoroTab.classList.add("active");
 
   const shortBreakTab = document.createElement("li");
   shortBreakTab.textContent = "Short Break";
@@ -21,6 +22,16 @@ function tabsCreator() {
       element.classList.remove("active");
     });
     e.target.classList.add("active");
+    if (e.target.textContent === "Pomodoro") {
+      currentTime = 25;
+      startCountdown(currentTime);
+    } else if (e.target.textContent === "Short Break") {
+      currentTime = 5;
+      startCountdown(currentTime);
+    } else if (e.target.textContent === "Long Break") {
+      currentTime = 10;
+      startCountdown(currentTime);
+    }
   });
 
   return tabsContainer;

@@ -16,6 +16,16 @@ function buttonCreator() {
 
   buttonContainer.append(startButton, stopButton, resetButton);
 
+  buttonContainer.addEventListener("click", e => {
+    if (e.target.textContent === "Reset") {
+      console.log("Reset");
+    } else if (e.target.textContent === "Start") {
+      if (!countDown) startCountdown(currentTime);
+    } else if (e.target.textContent === "Stop") {
+      clearInterval(countDown);
+    }
+  });
+
   return buttonContainer;
 }
 
