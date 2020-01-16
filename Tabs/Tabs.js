@@ -5,6 +5,7 @@ function tabsCreator() {
   const pomodoroTab = document.createElement("li");
   pomodoroTab.textContent = "Pomodoro";
   pomodoroTab.classList.add('tab');
+  pomodoroTab.classList.add('active');
 
   const shortTab = document.createElement("li");
   shortTab.textContent = "Short Break";
@@ -15,6 +16,13 @@ function tabsCreator() {
   longTab.classList.add('tab');
 
   tabsContainer.append(pomodoroTab, shortTab, longTab);
+
+  tabsContainer.addEventListener('click', e => {
+    Array.from(tabsContainer.children).forEach(element => {
+      element.classList.remove("active");
+    })
+    e.target.classList.add("active");
+  })
 
   return tabsContainer;
 }
